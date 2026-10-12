@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff3f8" />
+  <title>NexaCalc — Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="NexaCalc home">
+        <span class="brand-icon">ƒx</span>
+        <span>Nexa<span class="brand-light">Calc</span></span>
+      </a>
+      <span class="top-tag">A LITTLE PINK. A LOT OF PRECISION.</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY PLUS-ONE</p>
+      <h1>Big brain energy.<br /><span>Pretty little numbers.</span></h1>
+      <p class="subhead">A scientific calculator that makes every calculation feel effortless.</p>
+    </section>
+
+    <section class="calculator-card" aria-label="Scientific calculator">
+      <div class="calc-top">
+        <div class="mode-pill"><span class="status-dot"></span> Scientific <span class="mode-degree">DEG</span></div>
+        <button class="shift-button" id="shiftBtn" type="button" aria-pressed="false">⇧ Shift</button>
+      </div>
+      <div class="display-wrap">
+        <div id="expression" class="expression" aria-live="polite"></div>
+        <output id="display" class="display" aria-live="polite">0</output>
+        <div id="message" class="message" role="status"></div>
+      </div>
+
+      <div class="keypad scientific-grid">
+        <button class="key function" data-fn="sin">sin</button>
+        <button class="key function" data-fn="cos">cos</button>
+        <button class="key function" data-fn="tan">tan</button>
+        <button class="key function" data-value="π">π</button>
+        <button class="key function" data-fn="sqrt">√</button>
+        <button class="key function" data-fn="ln">ln</button>
+        <button class="key function" data-fn="log">log</button>
+        <button class="key function" data-value="e">e</button>
+        <button class="key function" data-value="^">xʸ</button>
+        <button class="key function" data-value="(">(</button>
+        <button class="key function" data-value=")">)</button>
+        <button class="key function" data-fn="abs">abs</button>
+      </div>
+
+      <div class="keypad main-grid">
+        <button class="key utility" data-action="clear">AC</button>
+        <button class="key utility" data-value="%">%</button>
+        <button class="key operator" data-value="/">÷</button>
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key operator" data-value="*">×</button>
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key operator" data-value="-">−</button>
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key operator" data-value="+">+</button>
+        <button class="key utility" data-action="sign">+/−</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key equals" data-action="equals">=</button>
+      </div>
+      <div class="calc-footer"><span>✦</span> Good things happen when you calculate.</div>
+    </section>
+
+    <section class="solutions-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR CALCULATION JOURNAL</p>
+          <h2>Solutions <span id="historyCount" class="count">(0)</span></h2>
+        </div>
+        <button id="clearHistory" class="text-button" type="button">Clear history</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <div class="empty-state">
+          <div class="empty-icon">♡</div>
+          <h3>A fresh start.</h3>
+          <p>Your calculations will show up here.</p>
+        </div>
+      </div>
+      <div class="tape-footer"><span>Calculation tape</span><span>Current session</span></div>
+    </section>
+
+    <footer class="site-footer">
+      <span class="footer-mark">ƒx</span>
+      <span><strong>NexaCalc</strong> Built for simplicity.</span>
+      <span class="footer-heart">Made with ♡</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
